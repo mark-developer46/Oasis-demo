@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Oasis 三期改造项目 — Figma 原型预览</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    background: #0F1C2E;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px;
+  }
+  .logo { font-size: 48px; margin-bottom: 16px; }
+  h1 { font-size: 36px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; }
+  .subtitle { font-size: 16px; color: rgba(255,255,255,0.6); margin-bottom: 48px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    width: 100%;
+    max-width: 960px;
+  }
+  .card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(74,127,165,0.6);
+    transform: translateY(-2px);
+  }
+  .card-num { font-size: 11px; color: rgba(255,255,255,0.4); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+  .card-title { font-size: 15px; font-weight: 700; color: #fff; }
+  .card-desc { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 4px; }
+  .card-tag {
+    display: inline-block;
+    background: rgba(74,127,165,0.3);
+    color: #6BA3D6;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-top: 4px;
+    width: fit-content;
+  }
+  .import-note {
+    margin-top: 48px;
+    padding: 20px 28px;
+    background: rgba(74,127,165,0.15);
+    border: 1px solid rgba(74,127,165,0.3);
+    border-radius: 10px;
+    max-width: 960px;
+    width: 100%;
+  }
+  .import-note h3 { font-size: 14px; font-weight: 700; color: #6BA3D6; margin-bottom: 8px; }
+  .import-note p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; }
+  .import-note code { background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px; font-size: 12px; color: #6BA3D6; }
+  .footer { margin-top: 32px; font-size: 12px; color: rgba(255,255,255,0.3); }
+</style>
+</head>
+<body>
+  <div class="logo">📋</div>
+  <h1>Oasis 三期改造项目</h1>
+  <p class="subtitle">Salesforce Lightning Experience · Figma 原型 · 1920×1080px</p>
+
+  <div class="grid">
+    <a class="card" href="pages/02-dashboard.html" target="_blank">
+      <div class="card-num">01 · 仪表盘</div>
+      <div class="card-title">首页仪表盘</div>
+      <div class="card-desc">欢迎页、统计卡片、待办事项、近期活动</div>
+      <div class="card-tag">Dashboard</div>
+    </a>
+
+    <a class="card" href="pages/03-na-request-list.html" target="_blank">
+      <div class="card-num">02 · 需求管理</div>
+      <div class="card-title">NA 需求列表</div>
+      <div class="card-desc">需求列表视图、子选项卡、筛选工具栏</div>
+      <div class="card-tag">NA Module</div>
+    </a>
+
+    <a class="card" href="pages/04-na-request-form.html" target="_blank">
+      <div class="card-num">03 · 需求表单</div>
+      <div class="card-title">新建需求申请</div>
+      <div class="card-desc">状态进度条、完整表单字段、侧边栏</div>
+      <div class="card-tag">NA Module</div>
+    </a>
+
+    <a class="card" href="pages/05-na-change-log.html" target="_blank">
+      <div class="card-num">04 · 变更记录</div>
+      <div class="card-title">NA 变更日志</div>
+      <div class="card-desc">版本对比（v1.0 vs v1.1）、变更历史时间线</div>
+      <div class="card-tag">Change Management</div>
+    </a>
+
+    <a class="card" href="pages/06-activity-list.html" target="_blank">
+      <div class="card-num">05 · 活动管理</div>
+      <div class="card-title">Activity 活动列表</div>
+      <div class="card-desc">看板视图+列表视图切换、活动状态泳道</div>
+      <div class="card-tag">EA Module</div>
+    </a>
+
+    <a class="card" href="pages/07-activity-detail.html" target="_blank">
+      <div class="card-num">06 · 活动详情</div>
+      <div class="card-title">Activity 基本信息</div>
+      <div class="card-desc">Highlights Panel、详情双列布局</div>
+      <div class="card-tag">EA Module</div>
+    </a>
+
+    <a class="card" href="pages/08-activity-hcp.html" target="_blank">
+      <div class="card-num">07 · 讲者管理</div>
+      <div class="card-title">HCP 讲者管理</div>
+      <div class="card-desc">讲者卡片列表、审核状态、e签宝集成侧边栏</div>
+      <div class="card-tag">EA Module · e签宝</div>
+    </a>
+
+    <a class="card" href="pages/09-activity-ss.html" target="_blank">
+      <div class="card-num">08 · 服务汇总</div>
+      <div class="card-title">Service Summary</div>
+      <div class="card-desc">费用明细表、预算对比、结算流程、DMS归档</div>
+      <div class="card-tag">SA Module</div>
+    </a>
+
+    <a class="card" href="pages/10-contract-sign.html" target="_blank">
+      <div class="card-num">09 · 合同签署</div>
+      <div class="card-title">e签宝 签署状态</div>
+      <div class="card-desc">签署流程卡片、合规字段表、API调用链</div>
+      <div class="card-tag">e签宝 Integration</div>
+    </a>
+  </div>
+
+  <div class="import-note">
+    <h3>📐 Figma 导入方式</h3>
+    <p>
+      方式一：打开 Figma，将整个 <code>figma-prototype</code> 文件夹拖入画布，每个 HTML 自动解析为独立 Frame<br>
+      方式二：逐个打开 HTML 文件，在 Figma 中使用「将图像/画板复制为截图」功能导入<br>
+      方式三：浏览器打开后截图，直接粘贴到 Figma 画布中
+    </p>
+  </div>
+
+  <div class="footer">Oasis 三期改造项目 · Salesforce 医疗器械线上活动管理系统 · 2026</div>
+</body>
+</html>

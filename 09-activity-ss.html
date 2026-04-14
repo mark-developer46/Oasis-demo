@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Oasis 三期 - 服务汇总</title>
+<link rel="stylesheet" href="../shared/styles.css">
+<style>body{background:var(--sl-bg);}</style>
+</head>
+<body>
+<div class="frame-wrapper">
+<div class="app-shell">
+
+  <!-- App Header -->
+  <div class="app-header">
+    <div class="app-header-logo"><div class="app-header-logo-icon">📋</div><span class="app-header-logo-text">Oasis 三期改造项目</span></div>
+    <div class="app-header-search"><span>🔍</span><input placeholder="搜索需求、活动、讲者..."></div>
+    <div class="app-header-nav">
+      <div class="app-header-nav-item" onclick="location.href='02-dashboard.html'">首页</div>
+      <div class="app-header-nav-item" onclick="location.href='03-na-request-list.html'">需求管理</div>
+      <div class="app-header-nav-item active">活动管理</div>
+      <div class="app-header-nav-item">报表中心</div>
+    </div>
+    <div class="app-header-actions">
+      <button class="app-header-btn outline">🔔</button>
+      <button class="app-header-btn primary">+ 新建活动</button>
+      <div class="app-header-avatar">BW</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Subtabs -->
+    <div class="subtabs">
+      <div class="subtab">详细信息</div>
+      <div class="subtab">🔗 相关列表</div>
+      <div class="subtab">🎤 讲者管理<span class="subtab-badge">6</span></div>
+      <div class="subtab">📅 活动</div>
+      <div class="subtab">📈 开放活动</div>
+      <div class="subtab active">📊 服务汇总</div>
+      <div class="subtab-dropdown">更多 ⋯</div>
+    </div>
+
+    <!-- Highlights Panel -->
+    <div class="highlights-panel">
+      <div class="highlights-inner">
+        <div class="highlights-record">
+          <div class="highlights-icon">🎯</div>
+          <div>
+            <div class="highlights-name">心内科高峰论坛 2026</div>
+            <div class="highlights-meta">NA-20260413-001 · <span class="status-badge s-closed" style="font-size:11px;">已关闭</span> · <span class="archive-badge">✅ DMS 已归档</span></div>
+          </div>
+        </div>
+        <div class="highlights-actions">
+          <button class="btn btn-outline" onclick="location.href='07-activity-detail.html'">← 基本信息</button>
+          <button class="btn btn-outline" onclick="location.href='10-contract-sign.html'">✍️ 合同签署</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item" onclick="location.href='07-activity-detail.html'">📋 基本信息</div>
+      <div class="tab-item">🗓️ 日程安排</div>
+      <div class="tab-item" onclick="location.href='08-activity-hcp.html'">🎤 讲者管理 <span class="tab-badge">6</span></div>
+      <div class="tab-item">📢 渠道分发</div>
+      <div class="tab-item">🔍 执行追踪</div>
+      <div class="tab-item active">📊 服务汇总</div>
+      <div class="tab-item">📎 附件管理</div>
+    </div>
+
+    <!-- Content -->
+    <div style="display:flex;flex:1;overflow:hidden;">
+
+      <!-- Main: Expense Table + Chart -->
+      <div style="flex:1;overflow-y:auto;padding:20px;">
+
+        <!-- Header -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+          <div>
+            <div style="font-size:16px;font-weight:700;color:var(--sl-gray-1);">📊 服务汇总</div>
+            <div style="font-size:13px;color:var(--sl-gray-2);margin-top:4px;">NA-20260413-001 · 心内科高峰论坛 2026 · 2026年4月17日结束</div>
+          </div>
+          <div style="display:flex;gap:8px;">
+            <button class="btn btn-outline" style="padding:6px 14px;font-size:12px;">📤 导出报告</button>
+            <button class="btn btn-primary" style="padding:6px 14px;font-size:12px;">💾 保存</button>
+          </div>
+        </div>
+
+        <!-- 费用汇总表 -->
+        <div class="card" style="margin-bottom:16px;">
+          <div class="card-header">
+            <div class="card-title">💰 费用明细</div>
+            <div style="display:flex;gap:16px;font-size:12px;">
+              <span>预算总额：<strong style="color:var(--sl-blue-mid);">¥150,000</strong></span>
+              <span>实际总额：<strong style="color:var(--sl-green);">¥70,500</strong></span>
+              <span>节余：<strong style="color:var(--sl-green);">¥79,500（53%）</strong></span>
+            </div>
+          </div>
+          <div class="card-body" style="padding:0;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>讲者</th>
+                  <th>医院</th>
+                  <th>费用类型</th>
+                  <th style="text-align:right;">预算金额</th>
+                  <th style="text-align:right;">实际金额</th>
+                  <th style="text-align:right;">差异</th>
+                  <th>状态</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight:600;">张华 主任医师</td>
+                  <td>北京协和医院</td>
+                  <td>讲课费</td>
+                  <td style="text-align:right;">¥15,000</td>
+                  <td style="text-align:right;font-weight:700;color:var(--sl-green);">¥15,000</td>
+                  <td style="text-align:right;">—</td>
+                  <td><span class="status-badge s-signed">✅ 已支付</span></td>
+                </tr>
+                <tr>
+                  <td style="font-weight:600;">李明 主任医师</td>
+                  <td>上海中山医院</td>
+                  <td>讲课费 + 差旅</td>
+                  <td style="text-align:right;">¥20,000</td>
+                  <td style="text-align:right;font-weight:700;color:var(--sl-green);">¥28,500</td>
+                  <td style="text-align:right;color:var(--sl-red);">+¥8,500</td>
+                  <td><span class="status-badge s-progress">处理中</span></td>
+                </tr>
+                <tr>
+                  <td style="font-weight:600;">王芳 主任医师</td>
+                  <td>广州中山一院</td>
+                  <td>讲课费</td>
+                  <td style="text-align:right;">¥15,000</td>
+                  <td style="text-align:right;font-weight:700;color:var(--sl-green);">¥15,000</td>
+                  <td style="text-align:right;">—</td>
+                  <td><span class="status-badge s-signed">✅ 已支付</span></td>
+                </tr>
+                <tr>
+                  <td style="font-weight:600;">刘佳 副教授</td>
+                  <td>四川华西医院</td>
+                  <td>讲课费</td>
+                  <td style="text-align:right;">¥12,000</td>
+                  <td style="text-align:right;font-weight:700;color:var(--sl-green);">¥12,000</td>
+                  <td style="text-align:right;">—</td>
+                  <td><span class="status-badge s-signed">✅ 已支付</span></td>
+                </tr>
+                <tr>
+                  <td colspan="3" style="font-weight:700;">平台费</td>
+                  <td style="text-align:right;font-weight:700;">¥30,000</td>
+                  <td style="text-align:right;font-weight:700;color:var(--sl-green);">¥12,000</td>
+                  <td style="text-align:right;color:var(--sl-green);">-¥18,000</td>
+                  <td><span class="status-badge s-signed">✅ 已支付</span></td>
+                </tr>
+                <tr style="background:#E8F4FD;font-weight:700;">
+                  <td colspan="3">合计</td>
+                  <td style="text-align:right;">¥150,000</td>
+                  <td style="text-align:right;color:var(--sl-green);">¥70,500</td>
+                  <td style="text-align:right;color:var(--sl-green);">-¥79,500</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Budget vs Actual Bar Chart (CSS) -->
+        <div class="card">
+          <div class="card-header"><div class="card-title">📈 预算 vs 实际对比</div></div>
+          <div class="card-body">
+            <div style="margin-bottom:16px;">
+              <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                <span style="font-size:13px;font-weight:600;color:var(--sl-gray-1);">预算总额</span>
+                <span style="font-size:13px;font-weight:700;color:var(--sl-blue-mid);">¥150,000</span>
+              </div>
+              <div class="progress-bar" style="height:20px;">
+                <div style="height:100%;background:var(--sl-blue-mid);border-radius:4px;width:100%;display:flex;align-items:center;justify-content:center;">
+                  <span style="color:#fff;font-size:12px;font-weight:700;">¥150,000</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;margin-bottom:6px;">
+                <span style="font-size:13px;font-weight:600;color:var(--sl-gray-1);">实际支出</span>
+                <span style="font-size:13px;font-weight:700;color:var(--sl-green);">¥70,500（节余 53%）</span>
+              </div>
+              <div class="progress-bar" style="height:20px;">
+                <div style="height:100%;background:var(--sl-green);border-radius:4px;width:47%;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;">
+                  <span style="color:#fff;font-size:12px;font-weight:700;">¥70,500</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Sidebar: Settlement + DMS -->
+      <div style="width:280px;background:var(--sl-white);border-left:1px solid var(--sl-border);overflow-y:auto;flex-shrink:0;">
+
+        <!-- 结算流程 -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">📋 结算关闭流程</div>
+          <div class="process-steps">
+            <div class="process-step done">
+              <div class="process-step-num">✓</div>
+              <div class="process-step-content">
+                <div class="process-step-title">服务汇总</div>
+                <div class="process-step-desc">汇总完成 · 2026-04-18</div>
+              </div>
+            </div>
+            <div class="process-step done">
+              <div class="process-step-num">✓</div>
+              <div class="process-step-content">
+                <div class="process-step-title">结算核对</div>
+                <div class="process-step-desc">财务部确认 · 2026-04-19</div>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">3</div>
+              <div class="process-step-content">
+                <div class="process-step-title">分级审批关闭</div>
+                <div class="process-step-desc">需 COO 审批（>50万追加）</div>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">4</div>
+              <div class="process-step-content">
+                <div class="process-step-title">DMS 合规归档</div>
+                <div class="process-step-desc">合同10年 / 凭证5年</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DMS 归档状态 -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">📁 DMS 合规归档</div>
+          <div style="padding:12px;background:var(--sl-green-bg);border-radius:8px;margin-bottom:10px;">
+            <div style="font-size:13px;font-weight:700;color:var(--sl-green);margin-bottom:4px;">✅ 已归档</div>
+            <div style="font-size:12px;color:var(--sl-gray-2);">归档编号：DMS-2026-0417-001</div>
+            <div style="font-size:12px;color:var(--sl-gray-2);">归档时间：2026-04-18 15:30</div>
+          </div>
+          <div style="font-size:12px;color:var(--sl-gray-2);line-height:1.8;">
+            <div>📄 合规归档文件清单</div>
+            <div style="margin-top:8px;">• 需求申请（NA_Request）</div>
+            <div>• 变更记录 × 2份</div>
+            <div>• 讲者合同 × 4份</div>
+            <div>• 费用凭证 × 6份</div>
+            <div>• 签署日志</div>
+          </div>
+        </div>
+
+        <!-- 备注 -->
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">📝 备注</div>
+          <div style="font-size:12px;color:var(--sl-gray-2);line-height:1.7;">
+            李明主任差旅超预算 ¥8,500，已发起追加审批。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</body>
+</html>

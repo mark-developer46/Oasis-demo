@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Oasis 三期 - 变更记录</title>
+<link rel="stylesheet" href="../shared/styles.css">
+<style>body{background:var(--sl-bg);}</style>
+</head>
+<body>
+<div class="frame-wrapper">
+<div class="app-shell">
+
+  <!-- App Header -->
+  <div class="app-header">
+    <div class="app-header-logo"><div class="app-header-logo-icon">📋</div><span class="app-header-logo-text">Oasis 三期改造项目</span></div>
+    <div class="app-header-search"><span>🔍</span><input placeholder="搜索需求、活动、讲者..."></div>
+    <div class="app-header-nav">
+      <div class="app-header-nav-item" onclick="location.href='02-dashboard.html'">首页</div>
+      <div class="app-header-nav-item active">需求管理</div>
+      <div class="app-header-nav-item" onclick="location.href='06-activity-list.html'">活动管理</div>
+      <div class="app-header-nav-item">报表中心</div>
+    </div>
+    <div class="app-header-actions">
+      <button class="app-header-btn outline">🔔</button>
+      <button class="app-header-btn primary">+ 新建需求</button>
+      <div class="app-header-avatar">BW</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Subtabs -->
+    <div class="subtabs">
+      <div class="subtab">全部<span class="subtab-badge">24</span></div>
+      <div class="subtab">最近查看</div>
+      <div class="subtab active">我负责的<span class="subtab-badge">8</span></div>
+      <div class="subtab">待我审批<span class="subtab-badge">3</span></div>
+      <div class="subtab">草稿<span class="subtab-badge">2</span></div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="page-title-group">
+        <div class="page-title">📋 变更记录</div>
+        <div class="page-subtitle">NA-20260413-001 · 心内科高峰论坛 2026 · <span class="status-badge s-review" style="font-size:11px;">合规审核中</span></div>
+      </div>
+      <div class="page-actions">
+        <button class="btn btn-outline" onclick="location.href='04-na-request-form.html'">← 返回申请</button>
+        <button class="btn btn-primary">+ 新建变更</button>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div style="padding:20px 24px;overflow-y:auto;flex:1;">
+
+      <!-- 变更概览 -->
+      <div style="display:flex;gap:16px;margin-bottom:20px;">
+        <div class="card" style="flex:1;padding:16px;display:flex;align-items:center;gap:12px;">
+          <span style="font-size:28px;">🔄</span>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--sl-gray-1);">当前版本</div>
+            <div style="font-size:20px;font-weight:700;color:var(--sl-blue-mid);">v1.1</div>
+          </div>
+          <div style="margin-left:auto;text-align:right;">
+            <div style="font-size:12px;color:var(--sl-gray-2);">变更时间</div>
+            <div style="font-size:13px;font-weight:600;color:var(--sl-gray-1);">2026-04-13 14:32</div>
+          </div>
+        </div>
+        <div class="card" style="padding:16px;display:flex;align-items:center;gap:12px;">
+          <span style="font-size:28px;">👤</span>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--sl-gray-1);">变更人</div>
+            <div style="font-size:13px;color:var(--sl-gray-1);">张明（市场部）</div>
+          </div>
+        </div>
+        <div class="card" style="padding:16px;display:flex;align-items:center;gap:12px;">
+          <span style="font-size:28px;">⚠️</span>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--sl-gray-1);">触发原因</div>
+            <div style="font-size:13px;color:var(--sl-orange);">预算增加 50%</div>
+          </div>
+        </div>
+        <div class="card" style="padding:16px;display:flex;align-items:center;gap:12px;">
+          <span style="font-size:28px;">📋</span>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:var(--sl-gray-1);">审批状态</div>
+            <div style="font-size:13px;"><span class="status-badge s-review" style="font-size:11px;">变更审核中</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Diff View -->
+      <div style="display:flex;gap:16px;margin-bottom:20px;">
+        <div class="diff-col">
+          <div class="diff-header">📄 v1.0（旧版本） · 2026-04-13 10:00</div>
+          <div class="diff-body">
+            <div class="diff-field">
+              <div class="diff-field-label">预算金额</div>
+              <div class="diff-field-old">¥100,000</div>
+            </div>
+            <div class="diff-field">
+              <div class="diff-field-label">预期规模</div>
+              <div class="diff-field-old">300 人</div>
+            </div>
+            <div class="diff-field">
+              <div class="diff-field-label">活动形式</div>
+              <div class="diff-field-old">线上直播</div>
+            </div>
+            <div class="diff-field">
+              <div class="diff-field-label">讲者数</div>
+              <div class="diff-field-old">4 名</div>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:center;width:48px;flex-shrink:0;">
+          <span style="font-size:24px;color:var(--sl-blue-mid);">→</span>
+        </div>
+        <div class="diff-col">
+          <div class="diff-header">📄 v1.1（新版本） · 2026-04-13 14:32</div>
+          <div class="diff-body">
+            <div class="diff-field">
+              <div class="diff-field-label">预算金额</div>
+              <div class="diff-field-new">¥150,000 ↑</div>
+            </div>
+            <div class="diff-field">
+              <div class="diff-field-label">预期规模</div>
+              <div class="diff-field-new">500 人 ↑</div>
+            </div>
+            <div class="diff-field">
+              <div class="diff-field-label">活动形式</div>
+              <div class="diff-field-value">线上直播（不变）</div>
+            </div>
+            <div class="diff-field">
+              <div class="diff-field-label">讲者数</div>
+              <div class="diff-field-value">6 名 ↑</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline + Change Log Table -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <!-- Timeline -->
+        <div class="card">
+          <div class="card-header"><div class="card-title">📜 变更历史</div></div>
+          <div class="card-body">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot done">✓</div>
+                <div class="timeline-content">
+                  <div class="timeline-title">v1.0 — 发起申请</div>
+                  <div class="timeline-meta">张明（市场部） · 2026-04-13 10:00</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot done">✓</div>
+                <div class="timeline-content">
+                  <div class="timeline-title">v1.1 — 预算追加 + 规模扩大</div>
+                  <div class="timeline-meta">张明（市场部） · 2026-04-13 14:32</div>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot active">●</div>
+                <div class="timeline-content">
+                  <div class="timeline-title">v1.1 — 变更审核中</div>
+                  <div class="timeline-meta">合规部 李华 审核中 · 预计 1 工作日</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 变更明细 -->
+        <div class="card">
+          <div class="card-header"><div class="card-title">📊 变更明细</div></div>
+          <div class="card-body" style="padding:0;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>变更字段</th>
+                  <th>旧值</th>
+                  <th>新值</th>
+                  <th>变更类型</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="font-weight:600;">预算金额</td>
+                  <td style="color:var(--sl-gray-2);">¥100,000</td>
+                  <td style="color:var(--sl-red);font-weight:700;">¥150,000</td>
+                  <td><span class="priority-tag p-high">大幅增加</span></td>
+                </tr>
+                <tr>
+                  <td style="font-weight:600;">预期规模</td>
+                  <td style="color:var(--sl-gray-2);">300人</td>
+                  <td style="color:var(--sl-red);font-weight:700;">500人</td>
+                  <td><span class="priority-tag p-high">大幅增加</span></td>
+                </tr>
+                <tr>
+                  <td style="font-weight:600;">讲者数量</td>
+                  <td style="color:var(--sl-gray-2);">4名</td>
+                  <td style="color:var(--sl-red);font-weight:700;">6名</td>
+                  <td><span class="priority-tag p-mid">增加</span></td>
+                </tr>
+                <tr>
+                  <td style="font-weight:600;">版本号</td>
+                  <td style="color:var(--sl-gray-2);">v1.0</td>
+                  <td style="color:var(--sl-blue-mid);font-weight:700;">v1.1</td>
+                  <td><span class="priority-tag p-low">版本升级</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Oasis 三期 - 活动详情</title>
+<link rel="stylesheet" href="../shared/styles.css">
+<style>body{background:var(--sl-bg);}</style>
+</head>
+<body>
+<div class="frame-wrapper">
+<div class="app-shell">
+
+  <!-- App Header -->
+  <div class="app-header">
+    <div class="app-header-logo"><div class="app-header-logo-icon">📋</div><span class="app-header-logo-text">Oasis 三期改造项目</span></div>
+    <div class="app-header-search"><span>🔍</span><input placeholder="搜索需求、活动、讲者..."></div>
+    <div class="app-header-nav">
+      <div class="app-header-nav-item" onclick="location.href='02-dashboard.html'">首页</div>
+      <div class="app-header-nav-item" onclick="location.href='03-na-request-list.html'">需求管理</div>
+      <div class="app-header-nav-item active">活动管理</div>
+      <div class="app-header-nav-item">报表中心</div>
+    </div>
+    <div class="app-header-actions">
+      <button class="app-header-btn outline">🔔</button>
+      <button class="app-header-btn primary">+ 新建活动</button>
+      <div class="app-header-avatar">BW</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Subtabs -->
+    <div class="subtabs">
+      <div class="subtab active">详细信息</div>
+      <div class="subtab">🔗 相关列表</div>
+      <div class="subtab">📎 附件</div>
+      <div class="subtab">📅 活动</div>
+      <div class="subtab">📈 开放活动</div>
+      <div class="subtab">📝 备注</div>
+      <div class="subtab-dropdown">更多 ⋯</div>
+    </div>
+
+    <!-- Highlights Panel -->
+    <div class="highlights-panel">
+      <div class="highlights-inner">
+        <div class="highlights-record">
+          <div class="highlights-icon">🎯</div>
+          <div>
+            <div class="highlights-name">心内科高峰论坛 2026</div>
+            <div class="highlights-meta">NA-20260413-001 · 学术会议 · 线上直播 · <span class="status-badge s-progress" style="font-size:11px;">进行中</span></div>
+          </div>
+        </div>
+        <div class="highlights-actions">
+          <button class="btn btn-outline" onclick="location.href='05-na-change-log.html'">📋 变更申请</button>
+          <button class="btn btn-primary" onclick="location.href='08-activity-hcp.html'">→ 讲者管理</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item active">📋 基本信息</div>
+      <div class="tab-item">🗓️ 日程安排</div>
+      <div class="tab-item" onclick="location.href='08-activity-hcp.html'">🎤 讲者管理 <span class="tab-badge">6</span></div>
+      <div class="tab-item">📢 渠道分发</div>
+      <div class="tab-item">🔍 执行追踪</div>
+      <div class="tab-item" onclick="location.href='09-activity-ss.html'">📊 服务汇总</div>
+      <div class="tab-item">📎 附件管理</div>
+    </div>
+
+    <!-- Detail Content -->
+    <div class="detail-two-col" style="overflow-y:auto;flex:1;">
+
+      <!-- Left Column -->
+      <div>
+        <!-- 关联信息 -->
+        <div class="card" style="margin-bottom:16px;">
+          <div class="card-header"><div class="card-title">🔗 关联信息</div></div>
+          <div class="card-body">
+            <div class="detail-field">
+              <div class="detail-field-label">关联 NA 编号</div>
+              <div class="detail-field-value" style="color:var(--sl-blue-mid);cursor:pointer;" onclick="location.href='04-na-request-form.html'">NA-20260413-001 · v1.1</div>
+            </div>
+            <div class="detail-field">
+              <div class="detail-field-label">活动负责人</div>
+              <div class="detail-field-value">张明（市场部）</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 基本信息 -->
+        <div class="card" style="margin-bottom:16px;">
+          <div class="card-header"><div class="card-title">📋 活动基本信息</div></div>
+          <div class="card-body">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+              <div class="detail-field">
+                <div class="detail-field-label">活动类型</div>
+                <div class="detail-field-value">学术会议</div>
+              </div>
+              <div class="detail-field">
+                <div class="detail-field-label">活动形式</div>
+                <div class="detail-field-value">📺 线上直播</div>
+              </div>
+              <div class="detail-field">
+                <div class="detail-field-label">目标受众</div>
+                <div class="detail-field-value">心内科医生、介入专家</div>
+              </div>
+              <div class="detail-field">
+                <div class="detail-field-label">预期规模</div>
+                <div class="detail-field-value">500 人</div>
+              </div>
+              <div class="detail-field" style="grid-column:1/-1;">
+                <div class="detail-field-label">活动平台</div>
+                <div class="detail-field-value">腾讯会议专业版</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 活动描述 -->
+        <div class="card">
+          <div class="card-header"><div class="card-title">📝 活动描述</div></div>
+          <div class="card-body">
+            <div style="font-size:13px;color:var(--sl-gray-1);line-height:1.7;">
+              邀请国内顶尖心内科专家，围绕冠心病介入治疗最新进展、房颤抗凝策略、心衰规范化管理三大主题进行学术分享，采用线上直播+互动问答形式，覆盖全国三甲医院心内科医生。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div>
+        <!-- 时间信息 -->
+        <div class="card" style="margin-bottom:16px;">
+          <div class="card-header"><div class="card-title">🗓️ 时间与安排</div></div>
+          <div class="card-body">
+            <div class="detail-field">
+              <div class="detail-field-label">开始日期</div>
+              <div class="detail-field-value">2026 年 4 月 15 日（周三）09:00</div>
+            </div>
+            <div class="detail-field">
+              <div class="detail-field-label">结束日期</div>
+              <div class="detail-field-value">2026 年 4 月 17 日（周五）18:00</div>
+            </div>
+            <div class="detail-field">
+              <div class="detail-field-label">持续时长</div>
+              <div class="detail-field-value">3 天</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 预算信息 -->
+        <div class="card" style="margin-bottom:16px;">
+          <div class="card-header"><div class="card-title">💰 预算信息</div></div>
+          <div class="card-body">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+              <div style="font-size:28px;font-weight:700;color:var(--sl-green);">¥150,000</div>
+              <div style="font-size:12px;color:var(--sl-gray-2);">审批后预算（v1.1）</div>
+            </div>
+            <div class="detail-field">
+              <div class="detail-field-label">预算类型</div>
+              <div class="detail-field-value">学术推广预算</div>
+            </div>
+            <div class="detail-field">
+              <div class="detail-field-label">当前状态</div>
+              <div class="detail-field-value"><span class="status-badge s-progress">合规审核中</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 讲者概览 -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">🎤 讲者概览</div>
+            <span style="font-size:12px;color:var(--sl-blue-mid);cursor:pointer;" onclick="location.href='08-activity-hcp.html'">管理 →</span>
+          </div>
+          <div class="card-body" style="padding:12px 16px;">
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;">
+              <span style="display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--sl-green);background:var(--sl-green-bg);padding:3px 8px;border-radius:12px;">✅ 已确认 4名</span>
+              <span style="display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--sl-orange);background:var(--sl-orange-bg);padding:3px 8px;border-radius:12px;">🔄 审核中 2名</span>
+            </div>
+            <div style="font-size:12px;color:var(--sl-gray-2);">
+              张华 主任 · 李明 教授 · 王芳 主任 · 刘佳 副教授 · 赵强 主治 · 孙伟 讲师
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</body>
+</html>
