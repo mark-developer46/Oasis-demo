@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Oasis 三期 - 讲者管理</title>
+<link rel="stylesheet" href="../shared/styles.css">
+<style>body{background:var(--sl-bg);}</style>
+</head>
+<body>
+<div class="frame-wrapper">
+<div class="app-shell">
+
+  <!-- App Header -->
+  <div class="app-header">
+    <div class="app-header-logo"><div class="app-header-logo-icon">📋</div><span class="app-header-logo-text">Oasis 三期改造项目</span></div>
+    <div class="app-header-search"><span>🔍</span><input placeholder="搜索需求、活动、讲者..."></div>
+    <div class="app-header-nav">
+      <div class="app-header-nav-item" onclick="location.href='02-dashboard.html'">首页</div>
+      <div class="app-header-nav-item" onclick="location.href='03-na-request-list.html'">需求管理</div>
+      <div class="app-header-nav-item active">活动管理</div>
+      <div class="app-header-nav-item">报表中心</div>
+    </div>
+    <div class="app-header-actions">
+      <button class="app-header-btn outline">🔔</button>
+      <button class="app-header-btn primary">+ 新建活动</button>
+      <div class="app-header-avatar">BW</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Subtabs -->
+    <div class="subtabs">
+      <div class="subtab">详细信息</div>
+      <div class="subtab">🔗 相关列表</div>
+      <div class="subtab active">🎤 讲者管理<span class="subtab-badge">6</span></div>
+      <div class="subtab">📅 活动</div>
+      <div class="subtab">📈 开放活动</div>
+      <div class="subtab-dropdown">更多 ⋯</div>
+    </div>
+
+    <!-- Highlights Panel -->
+    <div class="highlights-panel">
+      <div class="highlights-inner">
+        <div class="highlights-record">
+          <div class="highlights-icon">🎯</div>
+          <div>
+            <div class="highlights-name">心内科高峰论坛 2026</div>
+            <div class="highlights-meta">NA-20260413-001 · 学术会议 · <span class="status-badge s-progress" style="font-size:11px;">进行中</span></div>
+          </div>
+        </div>
+        <div class="highlights-actions">
+          <button class="btn btn-outline" onclick="location.href='07-activity-detail.html'">← 基本信息</button>
+          <button class="btn btn-primary" onclick="location.href='10-contract-sign.html'">→ 合同签署</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab Bar -->
+    <div class="tab-bar">
+      <div class="tab-item" onclick="location.href='07-activity-detail.html'">📋 基本信息</div>
+      <div class="tab-item">🗓️ 日程安排</div>
+      <div class="tab-item active">🎤 讲者管理 <span class="tab-badge">6</span></div>
+      <div class="tab-item">📢 渠道分发</div>
+      <div class="tab-item">🔍 执行追踪</div>
+      <div class="tab-item" onclick="location.href='09-activity-ss.html'">📊 服务汇总</div>
+      <div class="tab-item">📎 附件管理</div>
+    </div>
+
+    <!-- Content: Speakers + eSign Integration -->
+    <div style="display:flex;flex:1;overflow:hidden;">
+
+      <!-- Speaker Cards -->
+      <div style="flex:1;overflow-y:auto;padding:20px;">
+
+        <!-- Header row -->
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;">
+          <div>
+            <div style="font-size:16px;font-weight:700;color:var(--sl-gray-1);">🎤 讲者管理</div>
+            <div style="font-size:13px;color:var(--sl-gray-2);margin-top:4px;">心内科高峰论坛 2026 · 6 名讲者</div>
+          </div>
+          <div style="display:flex;gap:8px;">
+            <span style="display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--sl-green);background:var(--sl-green-bg);padding:4px 10px;border-radius:12px;">✅ 已确认 4名</span>
+            <span style="display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--sl-orange);background:var(--sl-orange-bg);padding:4px 10px;border-radius:12px;">🔄 审核中 2名</span>
+            <button class="btn btn-primary" style="padding:6px 14px;font-size:12px;">+ 添加讲者</button>
+          </div>
+        </div>
+
+        <!-- Speaker Cards -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+
+          <!-- Speaker 1 - 已通过 -->
+          <div class="hcp-card">
+            <div class="hcp-card-header">
+              <div class="hcp-avatar">👨‍⚕️</div>
+              <div class="hcp-info">
+                <div class="hcp-name">张华 主任医师</div>
+                <div class="hcp-title">北京协和医院 · 心内科主任</div>
+              </div>
+              <span class="status-badge s-approved">✅ 已通过</span>
+            </div>
+            <div style="font-size:12px;color:var(--sl-gray-2);margin-bottom:10px;padding-left:52px;">
+              专长：冠心病介入、心衰 | 讲课费 ¥15,000 | 已签署 ✍️
+            </div>
+            <div style="display:flex;gap:6px;">
+              <button class="btn btn-outline" style="padding:4px 10px;font-size:11px;">查看资质</button>
+              <button class="btn btn-outline" style="padding:4px 10px;font-size:11px;">查看合同</button>
+            </div>
+          </div>
+
+          <!-- Speaker 2 - 已通过 -->
+          <div class="hcp-card">
+            <div class="hcp-card-header">
+              <div class="hcp-avatar">👨‍⚕️</div>
+              <div class="hcp-info">
+                <div class="hcp-name">李明 主任医师</div>
+                <div class="hcp-title">上海中山医院 · 心内科副主任</div>
+              </div>
+              <span class="status-badge s-approved">✅ 已通过</span>
+            </div>
+            <div style="font-size:12px;color:var(--sl-gray-2);margin-bottom:10px;padding-left:52px;">
+              专长：心律失常、房颤消融 | 讲课费 ¥18,000 | 已签署 ✍️
+            </div>
+            <div style="display:flex;gap:6px;">
+              <button class="btn btn-outline" style="padding:4px 10px;font-size:11px;">查看资质</button>
+              <button class="btn btn-outline" style="padding:4px 10px;font-size:11px;">查看合同</button>
+            </div>
+          </div>
+
+          <!-- Speaker 3 - 已通过 -->
+          <div class="hcp-card">
+            <div class="hcp-card-header">
+              <div class="hcp-avatar">👩‍⚕️</div>
+              <div class="hcp-info">
+                <div class="hcp-name">王芳 主任医师</div>
+                <div class="hcp-title">广州中山一院 · 心内科主任</div>
+              </div>
+              <span class="status-badge s-approved">✅ 已通过</span>
+            </div>
+            <div style="font-size:12px;color:var(--sl-gray-2);margin-bottom:10px;padding-left:52px;">
+              专长：心衰规范化管理 | 讲课费 ¥15,000 | 已签署 ✍️
+            </div>
+            <div style="display:flex;gap:6px;">
+              <button class="btn btn-outline" style="padding:4px 10px;font-size:11px;">查看资质</button>
+              <button class="btn btn-outline" style="padding:4px 10px;font-size:11px;">查看合同</button>
+            </div>
+          </div>
+
+          <!-- Speaker 4 - 已通过 -->
+          <div class="hcp-card">
+            <div class="hcp-card-header">
+              <div class="hcp-avatar">👨‍⚕️</div>
+              <div class="hcp-info">
+                <div class="hcp-name">刘佳 副教授</div>
+                <div class="hcp-title">四川华西医院 · 心内科副教授</div>
+              </div>
+              <span class="status-badge s-approved">✅ 已通过</span>
+            </div>
+            <div style="font-size:12px;color:var(--sl-gray-2);margin-bottom:10px;padding-left:52px;">
+              专长：介入手术演示 | 讲课费 ¥12,000 | 已签署 ✍️
+            </div>
+            <div style="display:flex;gap:6px;">
+              <button class="btn btn-outline" style="padding:4px 10px;font-size:11px;">查看资质</button>
+              <button class="btn btn-outline" style="padding:4px 10px;font-size:11px;">查看合同</button>
+            </div>
+          </div>
+
+          <!-- Speaker 5 - 资质审核中 -->
+          <div class="hcp-card">
+            <div class="hcp-card-header">
+              <div class="hcp-avatar">👨‍⚕️</div>
+              <div class="hcp-info">
+                <div class="hcp-name">赵强 主治医师</div>
+                <div class="hcp-title">武汉同济医院 · 心内科主治</div>
+              </div>
+              <span class="status-badge s-progress">🔄 资质审核中</span>
+            </div>
+            <div style="font-size:12px;color:var(--sl-gray-2);margin-bottom:10px;padding-left:52px;">
+              专长：高血压防治 | 讲课费 ¥10,000 | 待提交资质
+            </div>
+            <div style="display:flex;gap:6px;">
+              <button class="btn btn-primary" style="padding:4px 10px;font-size:11px;">催促提交</button>
+            </div>
+          </div>
+
+          <!-- Speaker 6 - 合规筛查中 -->
+          <div class="hcp-card">
+            <div class="hcp-card-header">
+              <div class="hcp-avatar">👩‍⚕️</div>
+              <div class="hcp-info">
+                <div class="hcp-name">孙伟 讲师</div>
+                <div class="hcp-title">浙江大学附一院 · 心内科讲师</div>
+              </div>
+              <span class="status-badge s-review">⚠️ 合规筛查中</span>
+            </div>
+            <div style="font-size:12px;color:var(--sl-gray-2);margin-bottom:10px;padding-left:52px;">
+              专长：抗凝治疗 | 讲课费 ¥8,000 | 待合规通过
+            </div>
+            <div style="display:flex;gap:6px;">
+              <button class="btn btn-outline" style="padding:4px 10px;font-size:11px;">查看进度</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Sidebar: e签宝 Integration -->
+      <div style="width:280px;background:var(--sl-white);border-left:1px solid var(--sl-border);overflow-y:auto;flex-shrink:0;">
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">✍️ e签宝 签署状态</div>
+          <div class="process-steps">
+            <div class="process-step done">
+              <div class="process-step-num">✓</div>
+              <div class="process-step-content">
+                <div class="process-step-title">审核通过</div>
+                <div class="process-step-desc">4 名讲者审核已完成</div>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">2</div>
+              <div class="process-step-content">
+                <div class="process-step-title">合同发送</div>
+                <div class="process-step-desc">2 名待发送合同</div>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">3</div>
+              <div class="process-step-content">
+                <div class="process-step-title">e签宝 签署</div>
+                <div class="process-step-desc">讲者在线签署</div>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="process-step-num">4</div>
+              <div class="process-step-content">
+                <div class="process-step-title">Webhook 回调</div>
+                <div class="process-step-desc">签署完成自动通知</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">📋 合规字段说明</div>
+          <div style="font-size:11px;color:var(--sl-gray-2);line-height:1.8;">
+            <div style="font-family:monospace;color:var(--sl-blue-mid);">Contract_Document_ID</div>
+            <div style="margin-bottom:8px;">e签宝 文档唯一标识</div>
+            <div style="font-family:monospace;color:var(--sl-blue-mid);">Sign_Flow_ID</div>
+            <div style="margin-bottom:8px;">签署流程ID</div>
+            <div style="font-family:monospace;color:var(--sl-blue-mid);">Signature_Hash__c</div>
+            <div style="margin-bottom:8px;">签名哈希（防篡改）</div>
+            <div style="font-family:monospace;color:var(--sl-blue-mid);">Signed_Timestamp__c</div>
+            <div>签署时间戳（具法律效力）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</body>
+</html>

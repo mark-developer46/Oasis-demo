@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Oasis 三期 - 需求管理</title>
+<link rel="stylesheet" href="../shared/styles.css">
+<style>
+  body { background: var(--sl-bg); }
+  .priority-tag { font-size: 11px; padding: 2px 6px; border-radius: 3px; font-weight: 600; }
+  .p-high { background: var(--sl-red-bg); color: var(--sl-red); }
+  .p-mid { background: var(--sl-orange-bg); color: var(--sl-orange); }
+  .p-low { background: var(--sl-green-bg); color: var(--sl-green); }
+  .budget-cell { font-weight: 700; color: var(--sl-green); }
+  .version-tag { background: var(--sl-blue); color: #6BA3D6; font-size: 10px; padding: 1px 5px; border-radius: 3px; font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="frame-wrapper">
+<div class="app-shell">
+
+  <!-- App Header -->
+  <div class="app-header">
+    <div class="app-header-logo">
+      <div class="app-header-logo-icon">📋</div>
+      <span class="app-header-logo-text">Oasis 三期改造项目</span>
+    </div>
+    <div class="app-header-search">
+      <span>🔍</span>
+      <input placeholder="搜索需求、活动、讲者...">
+    </div>
+    <div class="app-header-nav">
+      <div class="app-header-nav-item" onclick="location.href='02-dashboard.html'">首页</div>
+      <div class="app-header-nav-item active">需求管理</div>
+      <div class="app-header-nav-item" onclick="location.href='06-activity-list.html'">活动管理</div>
+      <div class="app-header-nav-item">报表中心</div>
+    </div>
+    <div class="app-header-actions">
+      <button class="app-header-btn outline">🔔</button>
+      <button class="app-header-btn primary" onclick="location.href='04-na-request-form.html'">+ 新建需求</button>
+      <div class="app-header-avatar">BW</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Subtabs -->
+    <div class="subtabs">
+      <div class="subtab">📋 仪表盘</div>
+      <div class="subtab active">全部<span class="subtab-badge">24</span></div>
+      <div class="subtab">最近查看</div>
+      <div class="subtab">我负责的<span class="subtab-badge">8</span></div>
+      <div class="subtab">待我审批<span class="subtab-badge">3</span></div>
+      <div class="subtab">草稿<span class="subtab-badge">2</span></div>
+      <div class="subtab">已关闭</div>
+      <div class="subtab-dropdown">⚙️ 列表设置</div>
+    </div>
+
+    <!-- Toolbar -->
+    <div class="list-toolbar">
+      <span style="font-size:13px;color:var(--sl-gray-2);">筛选：</span>
+      <div class="filter-chip">状态: 合规审核中 <button class="remove">×</button></div>
+      <div class="filter-chip">优先级: 高 <button class="remove">×</button></div>
+      <span style="font-size:12px;color:var(--sl-blue-mid);cursor:pointer;">+ 添加筛选</span>
+
+      <div class="view-toggle">
+        <button class="view-btn">看板</button>
+        <button class="view-btn active">列表</button>
+      </div>
+      <button class="btn btn-outline" style="padding:6px 12px;font-size:12px;">📤 导出</button>
+      <button class="btn btn-outline" style="padding:6px 12px;font-size:12px;">🔄 刷新</button>
+    </div>
+
+    <!-- Table -->
+    <div class="list-content">
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th class="col-checkbox"><input type="checkbox" style="accent-color:var(--sl-blue-mid);"></th>
+              <th>NA 编号</th>
+              <th>需求名称</th>
+              <th>发起人</th>
+              <th>发起时间</th>
+              <th>状态</th>
+              <th>优先级</th>
+              <th>预算金额</th>
+              <th class="col-actions">操作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr onclick="location.href='04-na-request-form.html'">
+              <td><input type="checkbox" style="accent-color:var(--sl-blue-mid);"></td>
+              <td><span class="version-tag">v1.1</span></td>
+              <td style="font-weight:600;">心内科高峰论坛 2026</td>
+              <td>张明（市场部）</td>
+              <td>2026-04-13</td>
+              <td><span class="status-badge s-review">合规审核中</span></td>
+              <td><span class="priority-tag p-high">高</span></td>
+              <td class="budget-cell">¥150,000</td>
+              <td class="row-actions" onclick="event.stopPropagation()">
+                <button class="row-action-btn">查看</button>
+                <button class="row-action-btn">编辑</button>
+              </td>
+            </tr>
+            <tr onclick="location.href='04-na-request-form.html'">
+              <td><input type="checkbox" style="accent-color:var(--sl-blue-mid);"></td>
+              <td><span class="version-tag">v1.0</span></td>
+              <td style="font-weight:600;">消化内镜操作培训</td>
+              <td>李华（销售部）</td>
+              <td>2026-04-12</td>
+              <td><span class="status-badge s-progress">预算审批中</span></td>
+              <td><span class="priority-tag p-mid">中</span></td>
+              <td class="budget-cell">¥80,000</td>
+              <td class="row-actions" onclick="event.stopPropagation()">
+                <button class="row-action-btn">查看</button>
+                <button class="row-action-btn">编辑</button>
+              </td>
+            </tr>
+            <tr onclick="location.href='04-na-request-form.html'">
+              <td><input type="checkbox" style="accent-color:var(--sl-blue-mid);"></td>
+              <td><span class="version-tag">v1.0</span></td>
+              <td style="font-weight:600;">肿瘤免疫治疗进展研讨会</td>
+              <td>王芳（市场部）</td>
+              <td>2026-04-11</td>
+              <td><span class="status-badge s-approved">已确认</span></td>
+              <td><span class="priority-tag p-high">高</span></td>
+              <td class="budget-cell">¥200,000</td>
+              <td class="row-actions" onclick="event.stopPropagation()">
+                <button class="row-action-btn">查看</button>
+                <button class="row-action-btn">活动 →</button>
+              </td>
+            </tr>
+            <tr onclick="location.href='04-na-request-form.html'">
+              <td><input type="checkbox" style="accent-color:var(--sl-blue-mid);"></td>
+              <td><span class="version-tag">v1.0</span></td>
+              <td style="font-weight:600;">糖尿病规范化管理培训</td>
+              <td>赵强（医学部）</td>
+              <td>2026-04-10</td>
+              <td><span class="status-badge s-approved">已确认</span></td>
+              <td><span class="priority-tag p-low">低</span></td>
+              <td class="budget-cell">¥45,000</td>
+              <td class="row-actions" onclick="event.stopPropagation()">
+                <button class="row-action-btn">查看</button>
+                <button class="row-action-btn">活动 →</button>
+              </td>
+            </tr>
+            <tr onclick="location.href='04-na-request-form.html'">
+              <td><input type="checkbox" style="accent-color:var(--sl-blue-mid);"></td>
+              <td><span class="version-tag">v1.2</span></td>
+              <td style="font-weight:600;">神经内科新技术研讨会</td>
+              <td>陈静（市场部）</td>
+              <td>2026-04-09</td>
+              <td><span class="status-badge s-progress">需求确认中</span></td>
+              <td><span class="priority-tag p-mid">中</span></td>
+              <td class="budget-cell">¥120,000</td>
+              <td class="row-actions" onclick="event.stopPropagation()">
+                <button class="row-action-btn">查看</button>
+                <button class="row-action-btn">变更</button>
+              </td>
+            </tr>
+            <tr onclick="location.href='04-na-request-form.html'">
+              <td><input type="checkbox" style="accent-color:var(--sl-blue-mid);"></td>
+              <td><span class="version-tag">v1.0</span></td>
+              <td style="font-weight:600;">儿科常见病诊治培训</td>
+              <td>周明（销售部）</td>
+              <td>2026-04-08</td>
+              <td><span class="status-badge s-closed">已关闭</span></td>
+              <td><span class="priority-tag p-low">低</span></td>
+              <td class="budget-cell">¥30,000</td>
+              <td class="row-actions" onclick="event.stopPropagation()">
+                <button class="row-action-btn">查看</button>
+              </td>
+            </tr>
+            <tr onclick="location.href='04-na-request-form.html'">
+              <td><input type="checkbox" style="accent-color:var(--sl-blue-mid);"></td>
+              <td><span class="version-tag">v1.0</span></td>
+              <td style="font-weight:600;">心血管介入技术培训班</td>
+              <td>刘佳（医学部）</td>
+              <td>2026-04-07</td>
+              <td><span class="status-badge s-closed">已关闭</span></td>
+              <td><span class="priority-tag p-mid">中</span></td>
+              <td class="budget-cell">¥95,000</td>
+              <td class="row-actions" onclick="event.stopPropagation()">
+                <button class="row-action-btn">查看</button>
+              </td>
+            </tr>
+            <tr onclick="location.href='04-na-request-form.html'">
+              <td><input type="checkbox" style="accent-color:var(--sl-blue-mid);"></td>
+              <td><span class="version-tag">v1.0</span></td>
+              <td style="font-weight:600;">肺癌早筛专题讲座</td>
+              <td>孙伟（市场部）</td>
+              <td>2026-04-06</td>
+              <td><span class="status-badge s-draft">草稿</span></td>
+              <td><span class="priority-tag p-high">高</span></td>
+              <td class="budget-cell">¥60,000</td>
+              <td class="row-actions" onclick="event.stopPropagation()">
+                <button class="row-action-btn">编辑</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Pagination -->
+        <div class="pagination">
+          <span>显示 1-8 of 24 条记录</span>
+          <div class="pagination-btns">
+            <button class="page-btn">◀</button>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">▶</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</body>
+</html>

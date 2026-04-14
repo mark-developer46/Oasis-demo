@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Oasis 三期 - 新建需求申请</title>
+<link rel="stylesheet" href="../shared/styles.css">
+<style>body{background:var(--sl-bg);}</style>
+</head>
+<body>
+<div class="frame-wrapper">
+<div class="app-shell">
+
+  <!-- App Header -->
+  <div class="app-header">
+    <div class="app-header-logo">
+      <div class="app-header-logo-icon">📋</div>
+      <span class="app-header-logo-text">Oasis 三期改造项目</span>
+    </div>
+    <div class="app-header-search"><span>🔍</span><input placeholder="搜索需求、活动、讲者..."></div>
+    <div class="app-header-nav">
+      <div class="app-header-nav-item" onclick="location.href='02-dashboard.html'">首页</div>
+      <div class="app-header-nav-item active">需求管理</div>
+      <div class="app-header-nav-item" onclick="location.href='06-activity-list.html'">活动管理</div>
+      <div class="app-header-nav-item">报表中心</div>
+    </div>
+    <div class="app-header-actions">
+      <button class="app-header-btn outline">🔔</button>
+      <button class="app-header-btn primary">+ 新建需求</button>
+      <div class="app-header-avatar">BW</div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Subtabs -->
+    <div class="subtabs">
+      <div class="subtab">详细信息</div>
+      <div class="subtab">📎 附件</div>
+      <div class="subtab active">📝 变更记录<span class="subtab-badge">2</span></div>
+      <div class="subtab">✓ 审批历史</div>
+      <div class="subtab">🔗 活动关联<span class="subtab-badge">1</span></div>
+      <div class="subtab-dropdown">更多 ⋯</div>
+    </div>
+
+    <!-- Page Header -->
+    <div class="page-header">
+      <div class="page-title-group">
+        <div class="page-title">📝 新建需求申请</div>
+        <div class="page-subtitle">NA-20260414-001（自动生成） · <span class="version-tag">v1.0</span> · <span class="status-badge s-draft">草稿</span></div>
+      </div>
+      <div class="page-actions">
+        <button class="btn btn-outline">💾 保存草稿</button>
+        <button class="btn btn-primary">🚀 提交审核</button>
+      </div>
+    </div>
+
+    <!-- Status Flow -->
+    <div class="status-flow">
+      <div class="status-step done"><div class="status-step-circle">✓</div><div class="status-step-label">填写申请</div></div>
+      <div class="status-step active"><div class="status-step-circle">2</div><div class="status-step-label">合规预审</div></div>
+      <div class="status-step"><div class="status-step-circle">3</div><div class="status-step-label">预算审批</div></div>
+      <div class="status-step"><div class="status-step-circle">4</div><div class="status-step-label">需求确认</div></div>
+    </div>
+
+    <!-- Form -->
+    <div class="form-page">
+      <div class="form-main">
+        <!-- 基本信息 -->
+        <div class="form-section">
+          <div class="form-section-header">
+            <div class="form-section-title">📋 基本信息</div>
+            <span class="form-section-badge">必填</span>
+          </div>
+          <div class="form-section-body">
+            <div class="form-cols">
+              <div class="form-group">
+                <label class="form-label">活动名称 <span>*</span></label>
+                <input type="text" class="form-input" placeholder="请输入活动名称">
+              </div>
+              <div class="form-group">
+                <label class="form-label">活动类型 <span>*</span></label>
+                <select class="form-select">
+                  <option>请选择活动类型</option>
+                  <option>学术会议</option>
+                  <option>专题培训</option>
+                  <option>线上课程</option>
+                  <option>技能培训</option>
+                  <option>患者教育</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">目标受众</label>
+                <input type="text" class="form-input" placeholder="如：心内科医生、介入专家">
+              </div>
+              <div class="form-group">
+                <label class="form-label">预期规模（人）<span>*</span></label>
+                <input type="number" class="form-input" placeholder="请输入人数">
+              </div>
+              <div class="form-group form-col-full">
+                <label class="form-label">活动描述</label>
+                <textarea class="form-textarea" rows="3" placeholder="请详细描述活动目标、内容、形式等..."></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 时间与地点 -->
+        <div class="form-section">
+          <div class="form-section-header"><div class="form-section-title">🗓️ 时间与地点</div></div>
+          <div class="form-section-body">
+            <div class="form-cols">
+              <div class="form-group">
+                <label class="form-label">开始日期 <span>*</span></label>
+                <input type="date" class="form-input">
+              </div>
+              <div class="form-group">
+                <label class="form-label">结束日期</label>
+                <input type="date" class="form-input">
+              </div>
+              <div class="form-group form-col-full">
+                <label class="form-label">活动形式</label>
+                <div style="display:flex;gap:16px;margin-top:4px;">
+                  <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:13px;color:var(--sl-gray-1);">
+                    <input type="radio" name="format" checked style="accent-color:var(--sl-blue-mid);">📺 线上直播
+                  </label>
+                  <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:13px;color:var(--sl-gray-1);">
+                    <input type="radio" name="format" style="accent-color:var(--sl-blue-mid);">🏢 线下会议
+                  </label>
+                  <label style="display:flex;align-items:center;gap:6px;cursor:pointer;font-size:13px;color:var(--sl-gray-1);">
+                    <input type="radio" name="format" style="accent-color:var(--sl-blue-mid);">🔄 线上+线下混合
+                  </label>
+                </div>
+              </div>
+              <div class="form-group form-col-full">
+                <label class="form-label">活动平台</label>
+                <select class="form-select">
+                  <option>请选择平台</option>
+                  <option>腾讯会议专业版</option>
+                  <option selected>Zoom企业版</option>
+                  <option>自建平台</option>
+                  <option>其他</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 预算信息 -->
+        <div class="form-section">
+          <div class="form-section-header"><div class="form-section-title">💰 预算信息</div></div>
+          <div class="form-section-body">
+            <div class="form-cols">
+              <div class="form-group">
+                <label class="form-label">预算金额（元）<span>*</span></label>
+                <input type="number" class="form-input" placeholder="请输入预算金额">
+                <div class="form-hint">预算超50万需COO审批</div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">预算类型</label>
+                <select class="form-select">
+                  <option>市场活动预算</option>
+                  <option selected>学术推广预算</option>
+                  <option>销售费用</option>
+                </select>
+              </div>
+              <div class="form-group form-col-full">
+                <label class="form-label">预算用途说明</label>
+                <textarea class="form-textarea" rows="2" placeholder="请说明预算的主要用途..."></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="form-sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">📎 附件</div>
+          <div style="border:2px dashed var(--sl-border);border-radius:8px;padding:20px;text-align:center;color:var(--sl-gray-2);font-size:13px;cursor:pointer;">
+            📁 点击上传文件<br>
+            <span style="font-size:11px;">支持 PDF、Word、图片等</span>
+          </div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">📅 关联活动</div>
+          <div style="padding:12px;background:var(--sl-blue-light);border-radius:6px;font-size:13px;color:var(--sl-gray-1);">
+            活动创建后将自动生成关联关系
+          </div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-section-title">⚠️ 注意事项</div>
+          <ul style="font-size:12px;color:var(--sl-gray-2);padding-left:16px;line-height:1.8;">
+            <li>讲者需具备完整资质证明</li>
+            <li>预算超出需提前报批</li>
+            <li>合规筛查预计1-2个工作日</li>
+            <li>活动开始前至少10个工作日发起</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</body>
+</html>
